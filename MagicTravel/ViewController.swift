@@ -59,9 +59,17 @@ extension ViewController: UITableViewDelegate {
         
         //open modal when tapped an index
         let detauilViewController = UIViewController ()
-        detauilViewController.view.backgroundColor = .secondarySystemGroupedBackground
-       // detauilViewController.modalPresentationStyle = .fullScreen
-        present(detauilViewController, animated: true)
+//        detauilViewController.view.backgroundColor = .secondarySystemGroupedBackground
+        //! open modal
+                 //   detauilViewController.modalPresentationStyle = .fullScreen
+                //    present(detauilViewController, animated: true)
+        
+        //navigation for another screen
+        
+//        navigationController?.pushViewController(detauilViewController, animated: true)
+        
+        performSegue(withIdentifier: "showCountryDetails", sender: self)
+        
         
         
     }
