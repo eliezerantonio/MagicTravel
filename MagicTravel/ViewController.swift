@@ -53,10 +53,18 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
         print("user tapped on cell at \(indexPath)")
         
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        //open modal when tapped an index
+        let detauilViewController = UIViewController ()
+        detauilViewController.view.backgroundColor = .secondarySystemGroupedBackground
+       // detauilViewController.modalPresentationStyle = .fullScreen
+        present(detauilViewController, animated: true)
+        
+        
     }
    
 }
+
